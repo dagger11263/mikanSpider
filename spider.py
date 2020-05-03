@@ -38,7 +38,7 @@ def save_mikan_home(tag):
         for child in li.children:
             if child.name == 'span':
                 anime_id = child['data-bangumiid']
-                background_image_src = child['data-src']
+                background_image_src = child['data-src'].split("?")[0]
                 LOGGER.debug(f'anime_id: {anime_id}, background_image_src: {background_image_src}')
             elif child.name == 'div':
                 text = child.get_text('\t', strip=True)
