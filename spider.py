@@ -42,7 +42,7 @@ def save_mikan_home(tag):
                 LOGGER.debug(f'anime_id: {anime_id}, background_image_src: {background_image_src}')
             elif child.name == 'div':
                 text = child.get_text('\t', strip=True)
-                if text.startswith('2020') or text.startswith('此番组下暂无作品'):
+                if text.startswith('202') or text.startswith('此番组下暂无作品'):
                     last_update_date, anime_title = text.split('\t')
                     LOGGER.debug(f'last_update_date: {last_update_date}, anime_title: {anime_title}')
         data.append([weekday, anime_id, background_image_src, last_update_date, anime_title])
