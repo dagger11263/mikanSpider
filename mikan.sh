@@ -57,7 +57,7 @@ createPythonVenv() {
 }
 
 initPythonVenv() {
-  colorEcho ${BLUE} "Initalize venv, this will install python packages from requirements.txt."
+  colorEcho ${BLUE} "Initialize venv, this will install python packages from requirements.txt."
   # shellcheck source=/srv/mikanSpider/venv/bin/activate
   source ${MIKAN_SPIDER_HOME}venv/bin/activate
   if ! pip install -r ${MIKAN_SPIDER_HOME}requirements.txt; then
