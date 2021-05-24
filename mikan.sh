@@ -33,7 +33,7 @@ downloadMikanSpider() {
 
 createPythonVenv() {
   colorEcho ${BLUE} "Creating python venv for mikanSpider."
-  PYTHON_COMMAND=$(command -v python3.8 || command -v python3.7)
+  PYTHON_COMMAND=$(command -v python3.9 || command -v python3.8 || command -v python3.7)
   if [[ -z $PYTHON_COMMAND ]]; then
     colorEcho ${RED} "Failed to create python venv, python version >= 3.7 required."
     return 1
